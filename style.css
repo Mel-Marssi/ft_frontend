@@ -1,11 +1,161 @@
 * {
+  /* display: inline; */
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background-color: black;
+  /* background-color: black; */
+}
+body {
+  color: white;
+  background-color: #000;
+  overflow: hidden;
+}
+.row {
+  display: flex;
+  width: 100%;
 }
 .main-character {
-  display: flex;
-  justify-content: left;
-  align-items: left;
+  position: absolute;
+  width: 80vh;
+  height: 90vh;
+  left: 0%;
+  top: 10vh;
+  bottom: 0%;
+  z-index: 2;
+  filter: drop-shadow(-1px -1px 9px #02eb98);
 }
+.green-box,
+.green-box2 {
+  max-width: 100vh;
+  min-width: 90vh;
+  width: 80%;
+  left: 10%;
+  z-index: 1;
+}
+.green-box {
+  position: absolute;
+  background-color: #02efa47c;
+  transform: skew(-50deg, 0deg);
+  width: 80vh;
+  height: 92vh;
+  border: 2px solid #00ffae;
+  left: 5vh;
+  top: 10vh;
+}
+.green-box2 {
+  position: absolute;
+  background-color: #02efa47c;
+  transform: skew(-50deg, 0deg);
+  width: 80vh;
+  height: 90vh;
+  border: 2px solid #00ffae;
+  left: 7vh;
+  top: 12vh;
+}
+.white-bar {
+  position: absolute;
+  background-color: #f7f7f780;
+  transform: skew(-50deg, 0deg);
+  width: 40vh;
+  height: 35vh;
+  border: 2px solid #fdfdfdc2;
+  left: 50%;
+  bottom: -4%;
+  z-index: 1;
+}
+.white-bar2 {
+  position: absolute;
+  background-color: #f7f7f780;
+  transform: skew(-50deg, 0deg);
+  width: 40vh;
+  height: 35vh;
+  border: 2px solid #fdfdfdc2;
+  left: 50.8%;
+  bottom: -6%;
+}
+
+.decoration1,
+.decoration2,
+.decoration3 {
+  position: absolute;
+
+  height: 25%;
+  width: 25%;
+  filter: blur(9rem);
+  overflow: hidden;
+  background-color: #02eb98;
+}
+.decoration1 {
+  bottom: -15%;
+  right: -15%;
+}
+
+.decoration2 {
+  top: -15%;
+  left: -15%;
+}
+
+.decoration3 {
+  background: #cecfcf;
+  top: -15%;
+  right: -15%;
+}
+
+.texto-game {
+  color: aliceblue;
+  display: flex;
+  flex-wrap: wrap; 
+  flex-direction: column;
+  /* position: absolute; */
+  width:50vh;
+  height: 40vh;
+  margin-top: 25vh;
+  margin-left: 110vh;
+  z-index: 2;
+  /* background-color: #02eb9a75;  */
+}
+.texto-game > h2 {
+  /* flex: 1; */
+  position: absolute;
+  font-size: 3vw;
+  font-family: "Press Start 2P", cursive;
+  margin-top:1vh; 
+  margin-left: 15vh;
+  margin-right: 15vh;
+}
+.texto-game > h1 {
+  position: absolute;
+  font-size: 8vw;
+  font-family: "Press Start 2P", cursive;
+  margin-left: 2vh;
+  margin-top: 5vh;
+}
+.texto-game > h3 {
+  position: absolute;
+  font-size: 1.8vw;
+  font-family: "Press Start 2P", cursive;
+  margin-left: 6vh;
+  margin-top: 23.5vh;
+}
+
+.button-box {
+  position: absolute;
+  font-size: 2vw;
+  font-family: "Press Start 2P", cursive;
+  margin-left: 16vh;
+  margin-right: 15vh;
+  margin-bottom: 3vh;
+  margin-top: 30vh;
+  width: 20vh;
+  height: 9vh;
+  color: aliceblue;
+  border: #00ffae 2px solid;
+  background-color: #02eb9a00;
+  border-radius: 80px 80px 80px 80px;
+  z-index: 1;
+  transition: .7s ease-in-out;
+}
+.button-box:hover {
+  background-color: #02eb9a;
+  color: #000;
+}
+

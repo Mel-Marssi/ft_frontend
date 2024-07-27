@@ -16,7 +16,8 @@ html {
 }
 .my-character {
   background-color: transparent;
-  width: 100vh;
+  max-width: 50%;
+  width: 45vw;
   height: 90vh;
   margin-left: 0vh;
   margin-top: 10vh;
@@ -103,6 +104,7 @@ html {
   height: 40vh;
   max-height: 50vh;
   margin-top: 20vh;
+  margin-right: auto;
   z-index: 3;
 }
 

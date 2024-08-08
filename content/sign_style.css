@@ -67,6 +67,8 @@ h6 span{
   margin: 10px auto;
   cursor: pointer;
   background-color: #ffffff;
+  cursor: url("imageLandscape/click.png"), pointer !important;
+
 }
 .checkbox:checked + label:before,
 .checkbox:not(:checked) + label:before{
@@ -86,6 +88,8 @@ h6 span{
   text-align: center;
   font-size: 24px;
   transition: all 0.5s ease;
+  cursor: url("imageLandscape/click.png"), pointer !important;
+
 }
 .checkbox:checked + label:before {
   transform: translateX(44px) rotate(-270deg);
@@ -281,6 +285,9 @@ h6 span{
 .mb-4, .btn.mt-4{
 	color: rgb(255, 242, 242);
 }
+.btn.btn.mt-4{
+  box-shadow: 0px 0px 18px #00ffaec5;
+}
 .otherWay {
   display: flex;
   align-items: center; 
@@ -295,6 +302,7 @@ h6 span{
   text-align: center;
   margin: 20px 0;
   padding-top: 0%;
+  color:#b3b3b3;
 }
 .OrHeader::before, .OrHeader::after {
   content: '';
@@ -325,9 +333,10 @@ h6 span{
   padding: 0;
 }
 .btn.btn.mt-4:hover {
-	background-color: #02eb9a;
-	color: #000;
-	border: #00ffae 4px solid;
+	/* background-color: #02eb9a; */
+	color: #ffffff;
+	/* border: #00ffae 4px solid; */
+  box-shadow: 0px 0px 40px #00ffae;
 	transition: 0.4s ease-in-out;
 }
 .loginHeader {
@@ -346,6 +355,7 @@ h6 span{
   box-shadow: 0px 0px 18px #00ffaec5;
 }
 .Logo42:hover, .LogoGoogle:hover {
+  cursor: url("imageLandscape/click.png"), pointer !important;
   box-shadow: 0px 0px 40px #00ffae;
 }
 .LogoGoogle {
@@ -373,7 +383,9 @@ h6 span{
   display: block; /* Ensure the element respects margin */
   margin-bottom: 25%; /* Adjust the value as needed to move it up */
 }
-
+.link:hover{
+  color: #00ffae;
+}
 
 .section.text-center{
   text-align: center;

@@ -2,16 +2,22 @@
   /* display: inline; */
   margin: 0;
   padding: 0;
+  cursor: url("imageLandscape/pointer\ 1.png"), auto;
   /* background-color: black; */
 }
+
+button:hover, a:hover {
+  cursor: url("imageLandscape/click.png"), pointer !important;
+}
+
 body,
 html {
   display: flex;
   color: white;
   background-color: #000 !important;
-
   overflow: hidden;
 }
+
 .my-container {
   display: flex;
   width: 100%;
@@ -238,11 +244,11 @@ html {
     color: aliceblue;
     position: relative;
     justify-content: center;
-  align-items: center;
+    align-items: center;
     left: -70%;
     width: 20vw;
-  height: 40%;
-  max-height: 50%; 
+    height: 40%;
+    max-height: 50%;
     z-index: 3;
   }
   .texte-game span:first-of-type {
@@ -251,7 +257,6 @@ html {
     font-family: "Press Start 2P", cursive;
     line-height: 1;
     white-space: nowrap;
-
   }
 
   .texte-game span:nth-of-type(2) {
@@ -275,23 +280,8 @@ html {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .great-vibes-regular {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
 }
-

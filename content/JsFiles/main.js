@@ -1,6 +1,6 @@
 import Router from "./Router.js";
 
-console.log(event);
+
 
 document.addEventListener("DOMContentLoaded", function () {
   Router.init();

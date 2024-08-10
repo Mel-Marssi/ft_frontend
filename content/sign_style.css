@@ -286,7 +286,13 @@ h6 span{
 	color: rgb(255, 242, 242);
 }
 .btn.btn.mt-4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30%;
+  margin-left: 30%;
   box-shadow: 0px 0px 18px #00ffaec5;
+  border-radius: 20px;
 }
 .otherWay {
   display: flex;
@@ -407,5 +413,5 @@ h6 span{
 
 .exit:hover {
   cursor: url("imageLandscape/click.png"), pointer !important;
-  filter: drop-shadow(0px 0px 40px #00ffae);
+  filter: drop-shadow(0px 0px 24px #00ffae);
 }

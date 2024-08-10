@@ -33,7 +33,7 @@ const Router = {
       let blurEffect0 = document.querySelector(".my-container");
       blurEffect0.style.filter = "blur(0px)";
       let signInForm0 = document.querySelector(".sign_form");
-      signInForm0.hidden = !signInForm0.hidden;
+      signInForm0.hidden = true;
       break;
 	default:
 		console.log("Route not found");

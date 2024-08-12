@@ -21,12 +21,32 @@ _42.addEventListener("click", function () {
 
 let exit_button = document.querySelector(".exit")
 exit_button.addEventListener("click", function () {
-  Router.navigateTo("/content/", true);
-  let blurEffect0 = document.querySelector(".my-container");
-  blurEffect0.style.filter = "blur(0px)";
-  let signInForm0 = document.querySelector(".sign_form");
-  signInForm0.hidden = true;
+  let signInForm = document.querySelector(".section");
+  signInForm.classList.add('section_reverse');
+  setTimeout(function() {
+    Router.navigateTo("/content/", true);
+    signInForm.classList.remove('section_reverse');
+  }, 700);
 });
+
+
+// let loginContainer = document.querySelector(".container");
+// loginContainer.addEventListener("click", function (event) {
+//   console.log(event.target);
+//   // if (event.target === loginContainer) {
+//     Router.navigateTo("/content/", true);
+  
+// });
+
+// let signInForm = document.querySelector(".sign_form")
+// console.log(signInForm.hidden)
+// if (signInForm.hidden == false) {
+//   let blur_background = document.querySelector(".my-container");
+//   blur_background.addEventListener("click", function () {
+//   Router.navigateTo("/content/", true);
+//   alert("You have to sign in first")
+// });
+// }
 // let blurEffect = document.querySelector(".my-container");
 // blurEffect.style.filter = "blur(10px)";
 // let signInForm = document.querySelector(".sign-in");

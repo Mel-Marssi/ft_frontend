@@ -6,3 +6,12 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8080:8080
+    volumes:
+      - /home/mel-mars/Desktop/ft_frontend/content:/home
+volumes:
+  ft_frontend:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/mel-mars/Desktop/ft_frontend/content
+      o: bind

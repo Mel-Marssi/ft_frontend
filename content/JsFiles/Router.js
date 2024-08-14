@@ -8,32 +8,28 @@ const Router = {
         Router.navigateTo(route, true);
       });
     });
-	// window.addEventListener("popstate", event => {
-	//   Router.navigateTo("/LoginPage/", false);
-	//   // console.log(event.state.route);
-	// });
-  // window.addEventListener("beforeunload", (event) => {
-  //   event.preventDefault();
-  //   Router.navigateTo(window.location.pathname, true);
-  //   console.log(window.location.pathname);
-  // });
+    window.addEventListener("popstate", (event) => {
+      Router.navigateTo(event.state.route, false);
+      console.log(event.state.route);
+    });
+
   },
   navigateTo: (route, addHistory = true) => {
     if (addHistory) {
       history.pushState({ route }, null, route);
     }
-    else {
-      history.replaceState({ route }, null, route );
-    }
+    console.log(route);
     switch (route) {
+      case "/LoginPage":
+        Render.Load_LoginPage();
       case "/sign-in":
         Render.Load_SignForm();
         break;
-    case "/forget-password/":
-      Render.Load_ForgetPassword();
-      break;
-	default:
-		console.log("Route not found");
+      case "/forget-password/":
+        Render.Load_ForgetPassword();
+        break;
+      default:
+        console.log("Route not found");
         break;
     }
   },

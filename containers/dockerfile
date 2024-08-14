@@ -2,7 +2,6 @@ FROM nginx:latest
 
 COPY config.conf /etc/nginx/nginx.conf
 
-COPY content /home
 
 RUN chmod 777 /etc/nginx/nginx.conf
 

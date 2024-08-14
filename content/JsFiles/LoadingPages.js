@@ -1,6 +1,5 @@
 import Router from "./Router.js";
 
-
 function close_button() {
   let exit_button = document.querySelector(".exit");
   exit_button.addEventListener("click", function () {
@@ -10,18 +9,19 @@ function close_button() {
     blurEffect.style.animation = "RemoveBlurEffect 1s 1";
     blurEffect.style.filter = "blur(0px)";
     setTimeout(function () {
-      history.pushState( "LoginPage" , null, "LoginPage");
+      history.pushState("/LoginPage/", null, "/LoginPage/");
       document.querySelector(".sign_form").hidden = true;
       signInForm.classList.remove("section_reverse");
     }, 700);
   });
 }
 export function Load_LoginPage() {
+  console.log("chokran zakaria");
   document.body.innerHTML = `
 	    <section class="my-container" >
       <img
       class="my-character"
-      src="./imageLandscape/character.png"
+      src="./imageLandscape/character2.png"
       alt="Let's play"
       />
       <div class="green-box"></div>
@@ -41,9 +41,7 @@ export function Load_LoginPage() {
     </section>
     // Loading the sign-in page
         <section class="sign_form" hidden>
-      <!-- <div class="close_range1"></div>
-      <div class="close_range2"></div>
-      <div class="close_range3"></div> -->
+
       <div>
         <img class="exit" src="./imageLandscape/exit.png" alt="exit button" />
       </div>
@@ -175,15 +173,13 @@ export function Load_LoginPage() {
       </div>
     </section>
 	`;
-  // Router.go("/Load_LoginPage/", true);
+  // Router.go("/LoginPage/", true);
   document.querySelector("button").addEventListener("click", (event) => {
     event.preventDefault();
     Router.navigateTo("/sign-in", true);
   });
   close_button();
-  
 }
-
 
 export function Load_SignForm() {
   let blurEffect = document.querySelector(".my-container");
@@ -194,7 +190,7 @@ export function Load_SignForm() {
 }
 
 export function Load_ForgetPassword() {
-document.body.innerHTML = `
+  document.body.innerHTML = `
    <section class="forget_password" >
       <!-- Password Reset 1 - Bootstrap Brain Component -->
       <div class="bg-light py-3 py-md-5">

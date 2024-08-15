@@ -1,13 +1,7 @@
 import * as Render from "./LoadingPages.js";
 const Router = {
   init: () => {
-    document.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", (event) => {
-        let route = link.getAttribute("href");
-        event.preventDefault();
-        Router.navigateTo(route, true);
-      });
-    });
+    Router.attachLinkListeners();
     window.addEventListener("popstate", (event) => {
       Router.navigateTo(event.state.route, false);
       console.log(event.state.route);
@@ -15,11 +9,12 @@ const Router = {
   },
   navigateTo: (route, addHistory = true) => {
     if (addHistory) {
+      console.log(route);
       history.pushState({ route }, null, route);
-      window.addEventListener("popstate", (event) => {
-        Router.navigateTo(event.state.route, false);
-        console.log(event.state.route);
-      });
+      // window.addEventListener("popstate", (event) => {
+      //   Router.navigateTo(event.state.route, false);
+      //   console.log(event.state.route);
+      // });
     }
     console.log(route);
     switch (route) {
@@ -29,14 +24,28 @@ const Router = {
       case "/sign-in":
         Render.Load_SignForm();
         break;
-      case "/forget-password/":
+      case "/forget-password":
         Render.Load_ForgetPassword();
+
         break;
       default:
         console.log("Route not found");
         break;
     }
+    Router.attachLinkListeners();
   },
+  attachLinkListeners: () => {
+    document.querySelectorAll("a").forEach((link) => {
+      link.removeEventListener("click", Router.handleLinkClick); // Remove existing listener
+      link.addEventListener("click", Router.handleLinkClick); // Attach new listener
+    });
+  },
+  handleLinkClick: (event) => {
+    console.log("click");
+    event.preventDefault();
+    let route = event.currentTarget.getAttribute("href");
+    Router.navigateTo(route, true);
+  }
 };
 
 export default Router;

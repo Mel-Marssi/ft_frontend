@@ -3,16 +3,16 @@ import Router from "./Router.js";
 function close_button() {
   let exit_button = document.querySelector(".exit");
   exit_button.addEventListener("click", function () {
-    let signInForm = document.querySelector(".section");
-    signInForm.classList.add("section_reverse");
-    let blurEffect = document.querySelector(".my-container");
-    blurEffect.style.animation = "RemoveBlurEffect 1s 1";
-    blurEffect.style.filter = "blur(0px)";
-    setTimeout(function () {
-      Router.navigateTo("/LoginPage", true);
-      signInForm.classList.remove("section_reverse");
-    }, 700);
-  });
+      let signInForm = document.querySelector(".section");
+      signInForm.classList.add("section_reverse");
+      let blurEffect = document.querySelector(".my-container");
+      blurEffect.style.animation = "RemoveBlurEffect 1s 1";
+      blurEffect.style.filter = "blur(0px)";
+      setTimeout(function () {
+        Router.navigateTo("/LoginPage", true);
+        signInForm.classList.remove("section_reverse");
+      }, 700);
+    });
 }
 export function Load_LoginPage() {
   document.body.innerHTML = `
@@ -105,7 +105,7 @@ export function Load_LoginPage() {
                           </div>
                           <a href="/profil/" class="btn mt-4">submit</a>
                           <p class="mb-0 mt-4 text-center">
-                            <a href="/forget-password/" class="link">Forgot your password?</a>
+                            <a href="/forget-password" class="link">Forgot your password?</a>
                           </p>
                         </div>
                       </div>
@@ -180,6 +180,9 @@ export function Load_LoginPage() {
 }
 
 export function Load_SignForm() {
+  if(document.querySelector(".my-container") == null){
+    Load_LoginPage();
+  }
   let blurEffect = document.querySelector(".my-container");
   blurEffect.style.animation = "blurEffect 1s 1";
   blurEffect.style.filter = "blur(10px)";
@@ -277,5 +280,6 @@ export function Load_ForgetPassword() {
       </div>
     </section>
     `;
-  Router.go("/Load_ForgetPassword/", true);
+
+  // Router.go("/Load_ForgetPassword", true);
 }

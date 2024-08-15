@@ -1,11 +1,12 @@
 import Router from "./Router.js";
 import * as Render from "./LoadingPages.js";
 
-Router.navigateTo("/LoginPage", true);
-
-document.addEventListener("DOMContentLoaded", function () {
   Router.init();
-});
+
+
+Router.navigateTo("/LoginPage", true);
+// Render.Load_ForgetPassword();
+// console.log("main.js");
 
 let google = document.querySelector(".LogoGoogle");
 

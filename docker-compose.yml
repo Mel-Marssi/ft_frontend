@@ -7,7 +7,7 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - /home/mel-mars/Desktop/ft_frontend/content:/home
+      - ft_frontend:/home
 volumes:
   ft_frontend:
     driver: local

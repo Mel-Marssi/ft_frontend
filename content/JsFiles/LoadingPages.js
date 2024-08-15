@@ -9,19 +9,17 @@ function close_button() {
     blurEffect.style.animation = "RemoveBlurEffect 1s 1";
     blurEffect.style.filter = "blur(0px)";
     setTimeout(function () {
-      history.pushState("/LoginPage/", null, "/LoginPage/");
-      document.querySelector(".sign_form").hidden = true;
+      Router.navigateTo("/LoginPage", true);
       signInForm.classList.remove("section_reverse");
     }, 700);
   });
 }
 export function Load_LoginPage() {
-  console.log("chokran zakaria");
   document.body.innerHTML = `
 	    <section class="my-container" >
       <img
       class="my-character"
-      src="./imageLandscape/character2.png"
+      src="../imageLandscape/character2.png"
       alt="Let's play"
       />
       <div class="green-box"></div>
@@ -43,7 +41,7 @@ export function Load_LoginPage() {
         <section class="sign_form" hidden>
 
       <div>
-        <img class="exit" src="./imageLandscape/exit.png" alt="exit button" />
+        <img class="exit" src="../imageLandscape/exit.png" alt="exit button" />
       </div>
       <div class="section">
         <div class="container">
@@ -69,12 +67,12 @@ export function Load_LoginPage() {
                             <h3 class="mb-2 pb-3 loginHeader">Log In With:</h3>
                             <div class="button">
                               <img
-                                src="imageLandscape/google.png"
+                                src="../imageLandscape/google.png"
                                 alt="google"
                                 class="LogoGoogle"
                                 />
                                 <img
-                                src="imageLandscape/42.png"
+                                src="../imageLandscape/42.png"
                                 alt="42"
                                 class="Logo42"
                                 />

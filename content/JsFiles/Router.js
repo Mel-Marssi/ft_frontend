@@ -26,7 +26,6 @@ const Router = {
         break;
       case "/forget-password":
         Render.Load_ForgetPassword();
-
         break;
       default:
         console.log("Route not found");

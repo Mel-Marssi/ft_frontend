@@ -40,10 +40,16 @@ h6 span{
   padding: 0 20px;
   text-transform: uppercase;
   font-weight: 700;
-  color: aliceblue;
+  /* background-color: #000000; */
+  color: #00ffae;
+  text-shadow: 2px 2px 5px #000000;
+  font-size: 15px;
 }
 
-
+.mb-4, .btn.mt-4 {
+  color: #00ffae !important;
+  text-shadow: 2px 2px 5px #00ffaeb6;
+}
 
 .section{
   position: relative;
@@ -276,20 +282,21 @@ h6 span{
   -ms-flex-pack: center;
   text-align: center;
   border: none;
-  background-color: #ffeba7;
-  color: #102770;
+  background-color: #000000;
+  color: #00ffae;
   box-shadow: 0 8px 20px 0 #00ffaeb4 ;
 }
 .btn:active,
 .btn:focus{  
-  background-color: #102770;
-  color: #ffeba7;
+  background-color: #000000;
+  color: #00ffae;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
 .btn:hover{  
-  background-color: #102770;
-  color: #ffeba7;
+  background-color: #000000 !important;
+  color: #ffffff !important;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+  cursor: url("imageLandscape/click.png") 16 16, pointer !important;
 }
 .mb-4, .btn.mt-4{
 	color: rgb(255, 242, 242);
@@ -302,6 +309,8 @@ h6 span{
   margin-left: 30%;
   margin-bottom: 1vh;
   box-shadow: 0px 0px 18px #00ffaec5;
+  background-color: #000000;
+  color: #00ffae;
   border-radius: 20px;
 }
 .otherWay {
@@ -359,7 +368,9 @@ h6 span{
   text-align: left;
   font-size: x-large;
   margin-top:10vh;
-  color: #ffffff;
+  /* background-color: #000000; */
+  color: #00ffae;
+  text-shadow: 2px 2px 5px #00ffaead;
 
 }
 .Logo42{
@@ -396,11 +407,13 @@ h6 span{
 	display: block;
 }
 .link {
-  display: block; /* Ensure the element respects margin */
-  margin-bottom: 25%; /* Adjust the value as needed to move it up */
+  display: block; 
+  margin-bottom: 25%; 
+  background-color: #000000;
+  color: #00ffae;
 }
 .link:hover{
-  color: #00ffae;
+  color: white;
 }
 
 .section.text-center{

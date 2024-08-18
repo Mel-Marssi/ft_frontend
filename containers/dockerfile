@@ -5,6 +5,10 @@ COPY config.conf /etc/nginx/nginx.conf
 
 RUN chmod 777 /etc/nginx/nginx.conf
 
+RUN chown -R nginx:nginx /home
+
+RUN chmod -R 755 /home
+
 CMD [ "nginx", "-g", "daemon off;" ]
 
 

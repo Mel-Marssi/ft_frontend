@@ -13,5 +13,5 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/mel-mars/Desktop/ft_frontend/content
+      device: /mnt/c/Users/mel-mars/Desktop/ft_frontend
       o: bind

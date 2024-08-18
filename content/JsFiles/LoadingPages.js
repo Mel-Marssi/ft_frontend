@@ -51,13 +51,8 @@ export function Load_LoginPage() {
                 <h6 class="mb-0 pb-3">
                   <span>Log In </span><span>Sign Up</span>
                 </h6>
-                <input
-                class="checkbox"
-                type="checkbox"
-                id="reg-log"
-                name="reg-log"
-                />
-                <label for="reg-log"></label>
+                <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+			          	<label for="reg-log">a</label>
                 <div class="card-3d-wrap mx-auto">
                   <div class="card-3d-wrapper">
                     <div class="card-front">

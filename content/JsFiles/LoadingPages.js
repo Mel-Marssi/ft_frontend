@@ -37,7 +37,6 @@ export function Load_LoginPage() {
       <div class="decoration1"></div>
       <div class="decoration3"></div>
     </section>
-    // Loading the sign-in page
         <section class="sign_form" hidden>
 
       <div>
